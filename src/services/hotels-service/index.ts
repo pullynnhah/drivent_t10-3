@@ -19,12 +19,14 @@ async function getHotels(userId: number) {
   await verifyEnrollmentAndTicket(userId);
   const hotels = await hotelRepository.getHotels();
   if (hotels.length === 0) throw notFoundError();
+  return hotels;
 }
 
 async function getHotel(userId: number, hotelId: number) {
   await verifyEnrollmentAndTicket(userId);
   const hotel = await hotelRepository.getHotel(hotelId);
   if (!hotel) throw notFoundError();
+  return hotel;
 }
 
 const hotelsService = {

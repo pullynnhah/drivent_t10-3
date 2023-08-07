@@ -23,7 +23,8 @@
     "dev:migration:generate": "npm run dev:load-envs prisma migrate dev",
     "dev:seed": "npm run dev:load-envs prisma db seed",
     "dev": "cross-env NODE_ENV=development nodemon --watch 'src/' --exec 'ts-node -r tsconfig-paths/register ./src/server.ts' -e ts",
-    "dev:studio": "npm run dev:load-envs prisma studio"
+    "dev:studio": "npm run dev:load-envs prisma studio",
+    "test:studio": "npm run test:load-envs prisma studio"
   },
   "keywords": [
     "driven.t",
